@@ -13,6 +13,7 @@ export class ListUpdateBodyDataRequestDto {
 export class ListUpdateBodyRequestDto {
   @ApiProperty({ type: ListUpdateBodyDataRequestDto })
   @ValidateNested()
+  @IsDefined()
   @Type(() => ListUpdateBodyDataRequestDto)
   data: ListUpdateBodyDataRequestDto;
 }

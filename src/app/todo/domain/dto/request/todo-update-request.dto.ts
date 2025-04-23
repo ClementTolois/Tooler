@@ -25,6 +25,7 @@ export class TodoUpdateBodyDataRequestDto {
 export class TodoUpdateBodyRequestDto {
   @ApiProperty({ type: TodoUpdateBodyDataRequestDto })
   @ValidateNested()
+  @IsDefined()
   @Type(() => TodoUpdateBodyDataRequestDto)
   data: TodoUpdateBodyDataRequestDto;
 

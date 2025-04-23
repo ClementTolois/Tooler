@@ -12,6 +12,7 @@ export class ListCreateBodyDataRequestDto {
 export class ListCreateBodyRequestDto {
   @ApiProperty({ type: ListCreateBodyDataRequestDto })
   @ValidateNested()
+  @IsDefined()
   @Type(() => ListCreateBodyDataRequestDto)
   data: ListCreateBodyDataRequestDto;
 }

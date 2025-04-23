@@ -12,6 +12,7 @@ export class TodoCreateBodyDataRequestDto {
 export class TodoCreateBodyRequestDto {
   @ApiProperty({ type: TodoCreateBodyDataRequestDto })
   @ValidateNested()
+  @IsDefined()
   @Type(() => TodoCreateBodyDataRequestDto)
   data: TodoCreateBodyDataRequestDto;
 }
