@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   HttpException,
   Param,
@@ -69,7 +70,7 @@ export class ShortController {
     return ShortFetchResponseDtoAdapter.fromModel(result.value);
   }
 
-  @Get(':shortId')
+  @Delete(':shortId')
   @ApiOperation({ summary: 'Delete a short url' })
   @ApiOkResponse({ type: ShortDeleteApiResponseDto })
   async deleteShort(

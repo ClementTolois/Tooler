@@ -94,6 +94,12 @@ export class TodoRepository implements ITodoRepository {
       return new TodoFetchError(500, JSON.stringify(error));
     });
 
+    if (result.isOk() && result.value.length === 0) {
+      return err(
+        new TodoFetchError(404, `Todo with id ${model.todoId} not found`),
+      );
+    }
+
     if (result.isOk()) {
       return ok(TodoEntityAdapter.toModel(result.value[0]));
     }
@@ -115,6 +121,12 @@ export class TodoRepository implements ITodoRepository {
 
       return new TodoDeleteError(500, JSON.stringify(error));
     });
+
+    if (result.isOk() && result.value.length === 0) {
+      return err(
+        new TodoDeleteError(404, `Todo with id ${model.todoId} not found`),
+      );
+    }
 
     if (result.isOk()) {
       return ok(TodoEntityAdapter.toModel(result.value[0]));

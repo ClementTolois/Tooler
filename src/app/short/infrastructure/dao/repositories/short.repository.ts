@@ -89,6 +89,12 @@ export class ShortRepository implements IShortRepository {
       return new ShortDeleteError(500, JSON.stringify(error));
     });
 
+    if (result.isOk() && result.value.length === 0) {
+      return err(
+        new ShortDeleteError(404, `Short with id ${model.id} not found`),
+      );
+    }
+
     if (result.isOk()) {
       return ok(ShortEntityAdapter.toModel(result.value[0]));
     }
@@ -98,7 +104,6 @@ export class ShortRepository implements IShortRepository {
   async increment(
     model: IShortToIncrementModel,
   ): Promise<Result<IShortModel, ApiError>> {
-    console.log('ICI', model);
     const query = this.drizzleService.db
       .update(shortTable)
       .set({ redirections: sql`${shortTable.redirections} + 1` })
@@ -112,6 +117,12 @@ export class ShortRepository implements IShortRepository {
 
       return new ShortIncrementError(500, JSON.stringify(error));
     });
+
+    if (result.isOk() && result.value.length === 0) {
+      return err(
+        new ShortIncrementError(404, `Short with id ${model.id} not found`),
+      );
+    }
 
     if (result.isOk()) {
       return ok(ShortEntityAdapter.toModel(result.value[0]));
