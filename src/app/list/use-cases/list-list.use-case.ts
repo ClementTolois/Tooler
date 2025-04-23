@@ -1,12 +1,12 @@
-import type { Result } from 'neverthrow';
-import type { ApiError } from 'src/core/errors/api-error';
-import type { IListListUseCase } from '../domain/interfaces/use-cases/list-list.use-case.interface';
+import { Result } from 'neverthrow';
+import { ApiError } from 'src/core/errors/api-error';
+import { IListListUseCase } from '../domain/interfaces/use-cases/list-list.use-case.interface';
 import { Inject, Injectable } from '@nestjs/common';
 import {
   type IListRepository,
   LIST_REPOSITORY,
 } from '../domain/interfaces/repositories/list.repository.interface';
-import type { IListListModel } from '../domain/model/shared/list-list.model';
+import { IListListModel } from '../domain/model/shared/list-list.model';
 
 @Injectable()
 export class ListListUseCase implements IListListUseCase {

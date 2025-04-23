@@ -1,5 +1,5 @@
-import type { ITodoToUpdateModel } from 'src/app/todo/domain/model/todo-to-update.model';
-import type { ITodoUpdateRequestEntity } from '../entities/request/todo-update-request.entity';
+import { ITodoToUpdateModel } from 'src/app/todo/domain/model/todo-to-update.model';
+import { ITodoUpdateRequestEntity } from '../entities/request/todo-update-request.entity';
 
 export class TodoUpdateEntityAdapter {
   static fromModel(

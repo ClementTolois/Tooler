@@ -1,8 +1,8 @@
-import type {
+import {
   TodoCreateBodyRequestDto,
   TodoCreatePathParamsDto,
 } from 'src/app/todo/domain/dto/request/todo-create-request.dto';
-import type { ITodoToCreateModel } from 'src/app/todo/domain/model/todo-to-create.model';
+import { ITodoToCreateModel } from 'src/app/todo/domain/model/todo-to-create.model';
 
 export class TodoCreateRequestDtoAdapter {
   static toModel({

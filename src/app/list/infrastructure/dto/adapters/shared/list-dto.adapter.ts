@@ -1,5 +1,5 @@
-import type { ListDto } from 'src/app/list/domain/dto/shared/list.dto';
-import type { IListModel } from 'src/app/list/domain/model/shared/list.model';
+import { ListDto } from 'src/app/list/domain/dto/shared/list.dto';
+import { IListModel } from 'src/app/list/domain/model/shared/list.model';
 
 export class ListDtoAdapter {
   static fromModel(model: IListModel): ListDto {

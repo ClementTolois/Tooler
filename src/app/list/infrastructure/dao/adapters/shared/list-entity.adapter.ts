@@ -1,5 +1,5 @@
-import type { IListModel } from 'src/app/list/domain/model/shared/list.model';
-import type { IListEntity } from '../../entities/shared/list.entity';
+import { IListModel } from 'src/app/list/domain/model/shared/list.model';
+import { IListEntity } from '../../entities/shared/list.entity';
 
 export class ListEntityAdapter {
   static toModel(entity: IListEntity): IListModel {

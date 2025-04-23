@@ -1,13 +1,13 @@
 import { Inject } from '@nestjs/common';
-import type { ITodoCreateUseCase } from '../domain/interfaces/use-cases/todo-create.use-case.interface';
-import type { Result } from 'neverthrow';
-import type { ApiError } from 'src/core/errors/api-error';
+import { ITodoCreateUseCase } from '../domain/interfaces/use-cases/todo-create.use-case.interface';
+import { Result } from 'neverthrow';
+import { ApiError } from 'src/core/errors/api-error';
 import {
   TODO_REPOSITORY,
   type ITodoRepository,
 } from '../domain/interfaces/repositories/todo.repository.interface';
-import type { ITodoModel } from '../domain/model/shared/todo.model';
-import type { ITodoToCreateModel } from '../domain/model/todo-to-create.model';
+import { ITodoModel } from '../domain/model/shared/todo.model';
+import { ITodoToCreateModel } from '../domain/model/todo-to-create.model';
 
 export class TodoCreateUseCase implements ITodoCreateUseCase {
   constructor(

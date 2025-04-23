@@ -1,4 +1,4 @@
-import type { ITodoModel } from './todo.model';
+import { ITodoModel } from './todo.model';
 
 export interface ITodoListModel {
   readonly count: number;

@@ -1,5 +1,5 @@
-import type { ITodoModel } from 'src/app/todo/domain/model/shared/todo.model';
-import type { ITodoEntity } from '../../entities/shared/todo.entity';
+import { ITodoModel } from 'src/app/todo/domain/model/shared/todo.model';
+import { ITodoEntity } from '../../entities/shared/todo.entity';
 
 export class TodoEntityAdapter {
   static toModel(entity: ITodoEntity): ITodoModel {

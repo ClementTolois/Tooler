@@ -1,4 +1,4 @@
-import type { Result } from 'neverthrow';
+import { Result } from 'neverthrow';
 
 export interface IBaseUseCase<
   TExecute = unknown,

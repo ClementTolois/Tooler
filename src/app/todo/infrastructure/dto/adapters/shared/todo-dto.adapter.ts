@@ -1,5 +1,5 @@
-import type { TodoDto } from 'src/app/todo/domain/dto/shared/todo.dto';
-import type { ITodoModel } from 'src/app/todo/domain/model/shared/todo.model';
+import { TodoDto } from 'src/app/todo/domain/dto/shared/todo.dto';
+import { ITodoModel } from 'src/app/todo/domain/model/shared/todo.model';
 
 export class TodoDtoAdapter {
   static fromModel(model: ITodoModel): TodoDto {

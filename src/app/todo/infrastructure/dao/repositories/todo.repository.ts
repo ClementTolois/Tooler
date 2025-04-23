@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { err, fromPromise, ok, type Result } from 'neverthrow';
-import type { ITodoRepository } from 'src/app/todo/domain/interfaces/repositories/todo.repository.interface';
-import type { ITodoModel } from 'src/app/todo/domain/model/shared/todo.model';
-import type { ITodoToCreateModel } from 'src/app/todo/domain/model/todo-to-create.model';
-import type { DrizzleService } from 'src/core/database/drizzle-service';
-import type { ApiError } from 'src/core/errors/api-error';
+import { ITodoRepository } from 'src/app/todo/domain/interfaces/repositories/todo.repository.interface';
+import { ITodoModel } from 'src/app/todo/domain/model/shared/todo.model';
+import { ITodoToCreateModel } from 'src/app/todo/domain/model/todo-to-create.model';
+import { DrizzleService } from 'src/core/database/drizzle-service';
+import { ApiError } from 'src/core/errors/api-error';
 import { todoTable } from '../schemas/todo.schema';
 import { TodoCreateEntityAdapter } from '../adapters/todo-create-entity.adapter';
 import {
@@ -16,13 +16,13 @@ import {
 } from '../errors/todo.error';
 import { TodoEntityAdapter } from '../adapters/shared/todo-entity.adapter';
 import { eq } from 'drizzle-orm';
-import type { ITodoToUpdateModel } from 'src/app/todo/domain/model/todo-to-update.model';
+import { ITodoToUpdateModel } from 'src/app/todo/domain/model/todo-to-update.model';
 import { TodoUpdateEntityAdapter } from '../adapters/todo-update-entity.adapter';
-import type { ITodoToFetchModel } from 'src/app/todo/domain/model/todo-to-fetch.model';
-import type { ITodoToDeleteModel } from 'src/app/todo/domain/model/todo-to-delete.model';
-import type { ITodoListModel } from 'src/app/todo/domain/model/shared/todo-list.model';
+import { ITodoToFetchModel } from 'src/app/todo/domain/model/todo-to-fetch.model';
+import { ITodoToDeleteModel } from 'src/app/todo/domain/model/todo-to-delete.model';
+import { ITodoListModel } from 'src/app/todo/domain/model/shared/todo-list.model';
 import { TodoListEntityAdapter } from '../adapters/shared/todo-list-entity.adapter';
-import type { ITodoToListModel } from 'src/app/todo/domain/model/todo-to-list.model';
+import { ITodoToListModel } from 'src/app/todo/domain/model/todo-to-list.model';
 
 @Injectable()
 export class TodoRepository implements ITodoRepository {

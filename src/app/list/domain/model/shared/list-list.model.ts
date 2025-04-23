@@ -1,4 +1,4 @@
-import type { IListModel } from './list.model';
+import { IListModel } from './list.model';
 
 export interface IListListModel {
   readonly count: number;

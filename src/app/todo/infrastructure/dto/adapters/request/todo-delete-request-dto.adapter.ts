@@ -1,5 +1,5 @@
-import type { TodoDeletePathParamsDto } from 'src/app/todo/domain/dto/request/todo-delete-request.dto';
-import type { ITodoToDeleteModel } from 'src/app/todo/domain/model/todo-to-delete.model';
+import { TodoDeletePathParamsDto } from 'src/app/todo/domain/dto/request/todo-delete-request.dto';
+import { ITodoToDeleteModel } from 'src/app/todo/domain/model/todo-to-delete.model';
 
 export class TodoDeleteRequestDtoAdapter {
   static toModel({

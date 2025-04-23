@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { err, fromPromise, ok, type Result } from 'neverthrow';
-import type { IListRepository } from 'src/app/list/domain/interfaces/repositories/list.repository.interface';
-import type { IListToCreateModel } from 'src/app/list/domain/model/list-to-create.model';
-import type { IListModel } from 'src/app/list/domain/model/shared/list.model';
-import type { DrizzleService } from 'src/core/database/drizzle-service';
-import type { ApiError } from 'src/core/errors/api-error';
+import { IListRepository } from 'src/app/list/domain/interfaces/repositories/list.repository.interface';
+import { IListToCreateModel } from 'src/app/list/domain/model/list-to-create.model';
+import { IListModel } from 'src/app/list/domain/model/shared/list.model';
+import { DrizzleService } from 'src/core/database/drizzle-service';
+import { ApiError } from 'src/core/errors/api-error';
 import { listTable } from '../schemas/list.schema';
 import { ListCreateEntityAdapter } from '../adapters/list-create-entity.adapter';
 import {
@@ -16,11 +16,11 @@ import {
 } from '../errors/list.error';
 import { ListEntityAdapter } from '../adapters/shared/list-entity.adapter';
 import { ListUpdateEntityAdapter } from '../adapters/list-update-entity.adapter';
-import type { IListToUpdateModel } from 'src/app/list/domain/model/list-to-update.model';
+import { IListToUpdateModel } from 'src/app/list/domain/model/list-to-update.model';
 import { eq } from 'drizzle-orm';
-import type { IListToFetchModel } from 'src/app/list/domain/model/list-to-fetch.model';
-import type { IListToDeleteModel } from 'src/app/list/domain/model/list-to-delete.model';
-import type { IListListModel } from 'src/app/list/domain/model/shared/list-list.model';
+import { IListToFetchModel } from 'src/app/list/domain/model/list-to-fetch.model';
+import { IListToDeleteModel } from 'src/app/list/domain/model/list-to-delete.model';
+import { IListListModel } from 'src/app/list/domain/model/shared/list-list.model';
 import { ListListEntityAdapter } from '../adapters/shared/list-list-entity.adapter';
 
 @Injectable()

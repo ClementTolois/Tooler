@@ -1,8 +1,8 @@
-import type {
+import {
   ListUpdateBodyRequestDto,
   ListUpdatePathParamsDto,
 } from 'src/app/list/domain/dto/request/list-update-request.dto';
-import type { IListToUpdateModel } from 'src/app/list/domain/model/list-to-update.model';
+import { IListToUpdateModel } from 'src/app/list/domain/model/list-to-update.model';
 
 export class ListUpdateRequestDtoAdapter {
   static toModel({

@@ -1,5 +1,5 @@
-import type { IListToUpdateModel } from 'src/app/list/domain/model/list-to-update.model';
-import type { IListUpdateRequestEntity } from '../entities/request/list-update-request.entity';
+import { IListToUpdateModel } from 'src/app/list/domain/model/list-to-update.model';
+import { IListUpdateRequestEntity } from '../entities/request/list-update-request.entity';
 
 export class ListUpdateEntityAdapter {
   static fromModel(

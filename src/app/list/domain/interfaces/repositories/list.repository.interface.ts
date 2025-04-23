@@ -1,11 +1,11 @@
-import type { Result } from 'neverthrow';
-import type { IListToCreateModel } from '../../model/list-to-create.model';
-import type { IListModel } from '../../model/shared/list.model';
-import type { ApiError } from 'src/core/errors/api-error';
-import type { IListToUpdateModel } from '../../model/list-to-update.model';
-import type { IListToDeleteModel } from '../../model/list-to-delete.model';
-import type { IListToFetchModel } from '../../model/list-to-fetch.model';
-import type { IListListModel } from '../../model/shared/list-list.model';
+import { Result } from 'neverthrow';
+import { IListToCreateModel } from '../../model/list-to-create.model';
+import { IListModel } from '../../model/shared/list.model';
+import { ApiError } from 'src/core/errors/api-error';
+import { IListToUpdateModel } from '../../model/list-to-update.model';
+import { IListToDeleteModel } from '../../model/list-to-delete.model';
+import { IListToFetchModel } from '../../model/list-to-fetch.model';
+import { IListListModel } from '../../model/shared/list-list.model';
 
 export interface IListRepository {
   create(model: IListToCreateModel): Promise<Result<IListModel, ApiError>>;

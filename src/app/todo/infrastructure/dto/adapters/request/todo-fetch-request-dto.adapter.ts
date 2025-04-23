@@ -1,5 +1,5 @@
-import type { TodoFetchPathParamsDto } from 'src/app/todo/domain/dto/request/todo-fetch-request.dto';
-import type { ITodoToFetchModel } from 'src/app/todo/domain/model/todo-to-fetch.model';
+import { TodoFetchPathParamsDto } from 'src/app/todo/domain/dto/request/todo-fetch-request.dto';
+import { ITodoToFetchModel } from 'src/app/todo/domain/model/todo-to-fetch.model';
 
 export class TodoFetchRequestDtoAdapter {
   static toModel({

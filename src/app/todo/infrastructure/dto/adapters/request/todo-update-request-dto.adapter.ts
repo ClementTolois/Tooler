@@ -1,8 +1,8 @@
-import type {
+import {
   TodoUpdateBodyRequestDto,
   TodoUpdatePathParamsDto,
 } from 'src/app/todo/domain/dto/request/todo-update-request.dto';
-import type { ITodoToUpdateModel } from 'src/app/todo/domain/model/todo-to-update.model';
+import { ITodoToUpdateModel } from 'src/app/todo/domain/model/todo-to-update.model';
 
 export class TodoUpdateRequestDtoAdapter {
   static toModel({

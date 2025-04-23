@@ -1,5 +1,5 @@
-import type { ListFetchApiResponseDto } from 'src/app/list/domain/dto/response/list-fetch-response.dto';
-import type { IListModel } from 'src/app/list/domain/model/shared/list.model';
+import { ListFetchApiResponseDto } from 'src/app/list/domain/dto/response/list-fetch-response.dto';
+import { IListModel } from 'src/app/list/domain/model/shared/list.model';
 import { ListDtoAdapter } from '../shared/list-dto.adapter';
 
 export class ListFetchResponseDtoAdapter {

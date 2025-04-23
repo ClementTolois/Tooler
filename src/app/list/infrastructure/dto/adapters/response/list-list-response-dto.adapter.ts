@@ -1,5 +1,5 @@
-import type { ListListApiResponseDto } from 'src/app/list/domain/dto/response/list-list-response.dto';
-import type { IListListModel } from 'src/app/list/domain/model/shared/list-list.model';
+import { ListListApiResponseDto } from 'src/app/list/domain/dto/response/list-list-response.dto';
+import { IListListModel } from 'src/app/list/domain/model/shared/list-list.model';
 import { ListDtoAdapter } from '../shared/list-dto.adapter';
 
 export class ListListResponseDtoAdapter {
