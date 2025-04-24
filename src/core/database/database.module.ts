@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { DrizzleService } from './database/drizzle-service';
+import { DrizzleService } from './drizzle-service';
 
 @Module({
   providers: [DrizzleService],
   exports: [DrizzleService],
 })
-export class CoreModule {}
+export class DatabaseModule {}

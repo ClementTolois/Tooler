@@ -1,7 +1,7 @@
 import { Result } from 'neverthrow';
 import { IListToCreateModel } from '../../model/list-to-create.model';
 import { IListModel } from '../../model/shared/list.model';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { IListToUpdateModel } from '../../model/list-to-update.model';
 import { IListToDeleteModel } from '../../model/list-to-delete.model';
 import { IListToFetchModel } from '../../model/list-to-fetch.model';

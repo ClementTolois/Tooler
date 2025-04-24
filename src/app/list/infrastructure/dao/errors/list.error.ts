@@ -1,4 +1,4 @@
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 
 export class ListCreateError extends ApiError {
   name: string;

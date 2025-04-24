@@ -1,6 +1,6 @@
-import { IBaseUseCase } from 'src/core/types/base-use-case';
+import { IBaseUseCase } from 'src/utils/types/base-use-case';
 import { IShortModel } from '../../model/shared/short.model';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { IShortToDeleteModel } from '../../model/short-to-delete.model';
 
 export interface IShortDeleteUseCase

@@ -4,7 +4,7 @@ import { ITodoRepository } from 'src/app/todo/domain/interfaces/repositories/tod
 import { ITodoModel } from 'src/app/todo/domain/model/shared/todo.model';
 import { ITodoToCreateModel } from 'src/app/todo/domain/model/todo-to-create.model';
 import { DrizzleService } from 'src/core/database/drizzle-service';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { todoTable } from '../schemas/todo.schema';
 import { TodoCreateEntityAdapter } from '../adapters/todo-create-entity.adapter';
 import {

@@ -1,4 +1,4 @@
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 
 export class ShortCreateError extends ApiError {
   name: string;

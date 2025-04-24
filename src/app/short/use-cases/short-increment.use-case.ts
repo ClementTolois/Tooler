@@ -6,7 +6,7 @@ import {
 import { IShortToIncrementModel } from '../domain/model/short-to-increment.model';
 import { Result } from 'neverthrow';
 import { IShortModel } from '../domain/model/shared/short.model';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { IShortIncrementUseCase } from '../domain/interfaces/use-cases/short-increment.use-case.interface';
 
 export class ShortIncrementUseCase implements IShortIncrementUseCase {

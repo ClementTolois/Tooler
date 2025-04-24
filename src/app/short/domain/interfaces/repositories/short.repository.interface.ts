@@ -1,4 +1,4 @@
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { IShortModel } from '../../model/shared/short.model';
 import { IShortToCreateModel } from '../../model/short-to-create.model';
 import { Result } from 'neverthrow';

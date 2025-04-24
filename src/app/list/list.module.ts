@@ -7,10 +7,10 @@ import { ListUpdateUseCase } from './use-cases/list-update.use-case';
 import { ListFetchUseCase } from './use-cases/list-fetch.use-case';
 import { ListDeleteUseCase } from './use-cases/list-delete.use-case';
 import { ListListUseCase } from './use-cases/list-list.use-case';
-import { CoreModule } from 'src/core/core.module';
+import { DatabaseModule } from 'src/core/database/database.module';
 
 @Module({
-  imports: [CoreModule],
+  imports: [DatabaseModule],
   controllers: [ListController],
   providers: [
     ListCreateUseCase,

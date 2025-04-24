@@ -4,7 +4,7 @@ import { IShortRepository } from 'src/app/short/domain/interfaces/repositories/s
 import { IShortModel } from 'src/app/short/domain/model/shared/short.model';
 import { IShortToCreateModel } from 'src/app/short/domain/model/short-to-create.model';
 import { DrizzleService } from 'src/core/database/drizzle-service';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { shortTable } from '../schemas/short.schema';
 import { ShortCreateEntityAdapter } from '../adapters/short-create-entity.adapter';
 import {

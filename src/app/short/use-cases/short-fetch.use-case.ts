@@ -7,7 +7,7 @@ import { IShortFetchUseCase } from '../domain/interfaces/use-cases/short-fetch.u
 import { IShortToFetchModel } from '../domain/model/short-to-fetch.model';
 import { Result } from 'neverthrow';
 import { IShortModel } from '../domain/model/shared/short.model';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 
 export class ShortFetchUseCase implements IShortFetchUseCase {
   constructor(

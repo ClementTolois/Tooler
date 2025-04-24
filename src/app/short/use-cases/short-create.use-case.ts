@@ -7,7 +7,7 @@ import { IShortCreateUseCase } from '../domain/interfaces/use-cases/short-create
 import { IShortToCreateModel } from '../domain/model/short-to-create.model';
 import { Result } from 'neverthrow';
 import { IShortModel } from '../domain/model/shared/short.model';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 
 export class ShortCreateUseCase implements IShortCreateUseCase {
   constructor(

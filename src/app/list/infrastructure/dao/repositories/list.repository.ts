@@ -4,7 +4,7 @@ import { IListRepository } from 'src/app/list/domain/interfaces/repositories/lis
 import { IListToCreateModel } from 'src/app/list/domain/model/list-to-create.model';
 import { IListModel } from 'src/app/list/domain/model/shared/list.model';
 import { DrizzleService } from 'src/core/database/drizzle-service';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { listTable } from '../schemas/list.schema';
 import { ListCreateEntityAdapter } from '../adapters/list-create-entity.adapter';
 import {

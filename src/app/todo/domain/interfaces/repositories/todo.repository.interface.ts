@@ -1,4 +1,4 @@
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { ITodoModel } from '../../model/shared/todo.model';
 import { Result } from 'neverthrow';
 import { ITodoToCreateModel } from '../../model/todo-to-create.model';

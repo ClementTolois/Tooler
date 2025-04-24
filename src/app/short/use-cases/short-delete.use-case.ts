@@ -7,7 +7,7 @@ import { IShortDeleteUseCase } from '../domain/interfaces/use-cases/short-delete
 import { IShortToDeleteModel } from '../domain/model/short-to-delete.model';
 import { Result } from 'neverthrow';
 import { IShortModel } from '../domain/model/shared/short.model';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 
 export class ShortDeleteUseCase implements IShortDeleteUseCase {
   constructor(

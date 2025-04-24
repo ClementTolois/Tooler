@@ -6,7 +6,7 @@ import {
   timestamp,
 } from 'drizzle-orm/pg-core';
 import { listTable } from 'src/app/list/infrastructure/dao/schemas/list.schema';
-import { timestamps } from 'src/core/helpers/ columns.helper';
+import { timestamps } from 'src/utils/helpers/ columns.helper';
 export const todoTable = pgTable('todo', {
   id: uuid('id').primaryKey().defaultRandom(),
   description: varchar().notNull(),

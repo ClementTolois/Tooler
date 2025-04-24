@@ -1,6 +1,6 @@
 import { ShortCreateBodyRequestDto } from 'src/app/short/domain/dto/request/short-create-request.dto';
 import { IShortToCreateModel } from 'src/app/short/domain/model/short-to-create.model';
-import { normalizeUrl } from 'src/core/helpers/url.helper';
+import { normalizeUrl } from 'src/utils/helpers/url.helper';
 
 export class ShortCreateRequestDtoAdapter {
   static toModel({

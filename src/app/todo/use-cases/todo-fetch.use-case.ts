@@ -1,7 +1,7 @@
 import { Inject } from '@nestjs/common';
 import { ITodoFetchUseCase } from '../domain/interfaces/use-cases/todo-fetch.use-case.interface';
 import { Result } from 'neverthrow';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import {
   TODO_REPOSITORY,
   type ITodoRepository,

@@ -1,5 +1,5 @@
 import { Result } from 'neverthrow';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { IListCreateUseCase } from '../domain/interfaces/use-cases/list-create.use-case.interface';
 import { IListToCreateModel } from '../domain/model/list-to-create.model';
 import { IListModel } from '../domain/model/shared/list.model';

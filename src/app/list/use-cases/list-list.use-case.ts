@@ -1,5 +1,5 @@
 import { Result } from 'neverthrow';
-import { ApiError } from 'src/core/errors/api-error';
+import { ApiError } from 'src/utils/errors/api-error';
 import { IListListUseCase } from '../domain/interfaces/use-cases/list-list.use-case.interface';
 import { Inject, Injectable } from '@nestjs/common';
 import {
