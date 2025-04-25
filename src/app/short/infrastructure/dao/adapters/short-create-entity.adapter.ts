@@ -6,6 +6,7 @@ export class ShortCreateEntityAdapter {
     return {
       location: model.location,
       expiresAt: model.expiresAt,
+      userId: model.user.id,
     };
   }
 }

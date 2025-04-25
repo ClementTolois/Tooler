@@ -8,9 +8,10 @@ import { ListFetchUseCase } from './use-cases/list-fetch.use-case';
 import { ListDeleteUseCase } from './use-cases/list-delete.use-case';
 import { ListListUseCase } from './use-cases/list-list.use-case';
 import { DatabaseModule } from 'src/core/database/database.module';
+import { UserModule } from '../user/user.module';
 
 @Module({
-  imports: [DatabaseModule],
+  imports: [DatabaseModule, UserModule],
   controllers: [ListController],
   providers: [
     ListCreateUseCase,

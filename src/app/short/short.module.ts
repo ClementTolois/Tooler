@@ -8,9 +8,10 @@ import { ShortDeleteUseCase } from './use-cases/short-delete.use-case';
 import { ShortFetchUseCase } from './use-cases/short-fetch.use-case';
 import { ShortIncrementUseCase } from './use-cases/short-increment.use-case';
 import { DatabaseModule } from 'src/core/database/database.module';
+import { UserModule } from '../user/user.module';
 
 @Module({
-  imports: [DatabaseModule],
+  imports: [DatabaseModule, UserModule],
   controllers: [ShortController, SController],
   providers: [
     ShortCreateUseCase,

@@ -5,6 +5,7 @@ export class ListCreateEntityAdapter {
   static fromModel(model: IListToCreateModel): IListCreateRequestEntity {
     return {
       name: model.name,
+      userId: model.user.id,
     };
   }
 }

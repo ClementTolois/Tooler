@@ -8,8 +8,7 @@ import {
   HttpException,
   Param,
   UseGuards,
-  Req,
-  Request,
+  UseInterceptors,
 } from '@nestjs/common';
 import { ListListApiResponseDto } from './domain/dto/response/list-list-response.dto';
 import { ListCreateApiResponseDto } from './domain/dto/response/list-create-response.dto';
@@ -43,9 +42,12 @@ import {
   ApiOperation,
 } from '@nestjs/swagger';
 import { AuthGuard } from '@nestjs/passport';
-import { RequestUser } from 'src/utils/types/request-user';
-import { CurrentUser } from 'src/core/authz/auth.decorator';
+import { User } from 'src/common/decorators/current-user.decorator';
+import { ResolveUserInterceptor } from 'src/common/interceptors/resolve-user.interceptor';
+import { IUserModel } from '../user/domain/model/shared/user.model';
 
+@UseGuards(AuthGuard('jwt'))
+@UseInterceptors(ResolveUserInterceptor)
 @Controller('list')
 export class ListController {
   constructor(
@@ -57,14 +59,13 @@ export class ListController {
   ) {}
 
   @Post()
-  @UseGuards(AuthGuard('jwt'))
   @ApiOperation({ summary: 'Create a new list' })
   @ApiCreatedResponse({ type: ListCreateApiResponseDto })
   async createList(
-    @CurrentUser() user: RequestUser,
+    @User() user: IUserModel,
     @Body() body: ListCreateBodyRequestDto,
   ): Promise<ListCreateApiResponseDto> {
-    const model = ListCreateRequestDtoAdapter.toModel({ body });
+    const model = ListCreateRequestDtoAdapter.toModel({ body, user });
 
     const result = await this.listCreateUseCase.execute(model);
 

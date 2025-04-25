@@ -7,6 +7,7 @@ import {
   Param,
   Post,
   Put,
+  UseGuards,
 } from '@nestjs/common';
 import { TodoCreateUseCase } from './use-cases/todo-create.use-case';
 import { TodoDeleteUseCase } from './use-cases/todo-delete.use-case';
@@ -42,7 +43,9 @@ import { TodoDeleteApiResponseDto } from './domain/dto/response/todo-delete-resp
 import { TodoDeletePathParamsDto } from './domain/dto/request/todo-delete-request.dto';
 import { TodoDeleteRequestDtoAdapter } from './infrastructure/dto/adapters/request/todo-delete-request-dto.adapter';
 import { TodoDeleteResponseDtoAdapter } from './infrastructure/dto/adapters/response/todo-delete-response-dto.adapter';
+import { AuthGuard } from '@nestjs/passport';
 
+@UseGuards(AuthGuard('jwt'))
 @Controller('list/:listId/todo')
 export class TodoController {
   constructor(

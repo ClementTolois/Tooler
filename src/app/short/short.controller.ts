@@ -6,6 +6,8 @@ import {
   HttpException,
   Param,
   Post,
+  UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
 import { ShortCreateUseCase } from './use-cases/short-create.use-case';
 import { ShortDeleteUseCase } from './use-cases/short-delete.use-case';
@@ -27,7 +29,13 @@ import { ShortDeletePathParamsDto } from './domain/dto/request/short-delete-requ
 import { ShortDeleteApiResponseDto } from './domain/dto/response/short-delete-response.dto';
 import { ShortDeleteRequestDtoAdapter } from './infrastructure/dto/adapters/request/short-delete-request-dto.adapter';
 import { ShortDeleteResponseDtoAdapter } from './infrastructure/dto/adapters/response/short-delete-response-dto.adapter';
+import { AuthGuard } from '@nestjs/passport';
+import { ResolveUserInterceptor } from 'src/common/interceptors/resolve-user.interceptor';
+import { User } from 'src/common/decorators/current-user.decorator';
+import { IUserModel } from '../user/domain/model/shared/user.model';
 
+@UseGuards(AuthGuard('jwt'))
+@UseInterceptors(ResolveUserInterceptor)
 @Controller('short')
 export class ShortController {
   constructor(
@@ -40,9 +48,10 @@ export class ShortController {
   @ApiOperation({ summary: 'Create a new short url' })
   @ApiCreatedResponse({ type: ShortCreateApiResponseDto })
   async createShort(
+    @User() user: IUserModel,
     @Body() body: ShortCreateBodyRequestDto,
   ): Promise<ShortCreateApiResponseDto> {
-    const model = ShortCreateRequestDtoAdapter.toModel({ body });
+    const model = ShortCreateRequestDtoAdapter.toModel({ body, user });
 
     const result = await this.shortCreateUseCase.execute(model);
 
