@@ -27,10 +27,8 @@ export class UserResolveUseCase implements IUserResolveUseCase {
       (userFetchResult.isErr() && userFetchResult.error.statusCode !== 404) ||
       userFetchResult.isOk()
     ) {
-      console.log('return fetched user');
       return userFetchResult;
     }
-    console.log('create new user');
     return this.userRepository.create(
       UserToResolveModelAdapter.toUserToCreateModel(model),
     );
